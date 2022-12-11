@@ -260,7 +260,7 @@ export default class Truncate extends Component {
                     }
                 }
 
-                resultLine = <span>{lastLineText}{ellipsis}</span>;
+                resultLine = <p>{lastLineText}{ellipsis}</p>;
             } else {
                 // Binary search determining when the line breaks
                 let lower = 0;
@@ -299,13 +299,13 @@ export default class Truncate extends Component {
 
     renderLine(line, i, arr) {
         if (i === arr.length - 1) {
-            return <span key={i}>{line}</span>;
+            return <p key={i}>{line}</p>;
         } else {
             const br = <br key={i + 'br'} />;
 
             if (line) {
                 return [
-                    <span key={i}>{line}</span>,
+                    <p key={i}>{line}</p>,
                     br
                 ];
             } else {
